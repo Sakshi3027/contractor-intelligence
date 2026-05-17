@@ -1,0 +1,22 @@
+artifact_path: /Users/saksh/Documents/contractor-intelligence/services/mlflow-artifacts/1/models/m-da24da44687840b1b76b5dc99062c86f/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.12.7
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: ubj
+    xgb_version: 3.2.0
+mlflow_version: 3.12.0
+model_id: m-da24da44687840b1b76b5dc99062c86f
+model_size_bytes: 72036
+model_uuid: m-da24da44687840b1b76b5dc99062c86f
+prompts: null
+run_id: 19e9b6148196474bb58800c27f8f5156
+utc_time_created: '2026-05-17 20:58:33.844149'
