@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001";
+const API_URL = "/api/proxy";
 
 export const api = axios.create({
   baseURL: API_URL,
@@ -67,7 +67,7 @@ export const getSummary = async (): Promise<AnalyticsSummary> => {
 };
 
 export const getOutreach = async (): Promise<Outreach[]> => {
-  const res = await api.get("/outreach/");
+  const res = await api.get("/outreach");
   return res.data;
 };
 
