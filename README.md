@@ -15,14 +15,24 @@
 
 ## Screenshots
 
-### Dashboard Overview
+### 1. Main Dashboard
 ![Dashboard](https://raw.githubusercontent.com/Sakshi3027/contractor-intelligence/main/assets/dashboard.png)
 
-### Lead Scoring Table
+The main dashboard gives you a real-time overview of the entire system. The five stat cards show total businesses discovered (17), hot leads identified by the ML model (7), warm leads, average lead score across all businesses (0.408), and outreach emails sent. The bar chart below breaks down lead distribution by city red bars are hot leads, blue are cold so you can instantly see which markets have the most opportunity. Boston, Chicago, and New York are the three target cities in this run.
+
+---
+
+### 2. Lead Scoring Table
 ![Leads Table](https://raw.githubusercontent.com/Sakshi3027/contractor-intelligence/main/assets/leads-table.png)
 
-### Lead Distribution by City
+Every discovered business gets scored by the XGBoost model using 24 engineered features Google rating, review count, website quality, contact completeness, and more. The score bar visually shows relative quality, and each lead is classified as 🔥 hot (score ≥ 0.70), 🌤 warm (0.40–0.70), or ❄️ cold (below 0.40). Hot leads like Micro-Tech USA, Boston IT, and Power Consulting Group score 0.738 and are immediately queued for AI agent outreach. The table is sortable and filterable by tier and city.
+
+---
+
+### 3. Lead Distribution by City
 ![Chart](https://raw.githubusercontent.com/Sakshi3027/contractor-intelligence/main/assets/chart.png)
+
+The interactive bar chart shows how leads are distributed across cities and tiers. Hovering over a city (Boston shown here) reveals the exact breakdown 3 hot leads and 4 cold leads in Boston. This view helps identify which cities are producing the highest quality leads so the pipeline can be prioritized accordingly. Chicago has the most hot leads in this run, making it the top target market for outreach.
 
 ---
 
