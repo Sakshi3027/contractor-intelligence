@@ -108,7 +108,7 @@ Most lead generation tools are static scripts. This system:
     cd ../frontend
     npm install
     npm run dev
-    # Open http://localhost:3000
+    # Open https://contractor-intel-five.vercel.app
 
 ---
 
@@ -146,7 +146,7 @@ Most lead generation tools are static scripts. This system:
 
 | Service | URL | Description |
 |---------|-----|-------------|
-| Dashboard | http://localhost:3000 | Next.js UI |
+| Dashboard | https://contractor-intel-five.vercel.app | Next.js UI |
 | API Docs | http://localhost:8001/docs | FastAPI Swagger |
 | MLflow | http://localhost:5002 | Experiment tracking |
 | Temporal UI | http://localhost:8888 | Workflow monitoring |
