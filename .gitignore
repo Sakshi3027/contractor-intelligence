@@ -42,4 +42,5 @@ mlruns/
 # Terraform
 infrastructure/terraform/.terraform/
 *.tfstate
-*.tfstate.backup
+*.tfstate.backup.DS_Store
+**/.DS_Store
