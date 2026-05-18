@@ -57,30 +57,31 @@ async def find_email_by_domain(domain: str) -> Optional[dict]:
 
 async def guess_email(domain: str) -> Optional[dict]:
     """Try common email patterns when Hunter finds nothing"""
-
-    async with httpx.AsyncClient() as client:
-        # Try info@domain first
-        for prefix in ["info", "contact", "hello", "sales"]:
-            response = await client.get(
-                f"{HUNTER_BASE_URL}/email-verifier",
-                params={
-                    "email": f"{prefix}@{domain}",
-                    "api_key": HUNTER_API_KEY
-                }
-            )
-
-            if response.status_code == 200:
-                data = response.json()
-                status = data.get("data", {}).get("status")
-
-                if status in ["valid", "accept_all"]:
-                    return {
-                        "email": f"{prefix}@{domain}",
-                        "confidence": 70,
-                        "type": "guessed",
-                        "source": "pattern_guess"
-                    }
-
+    try:
+        async with httpx.AsyncClient(timeout=5.0) as client:
+            for prefix in ["info", "contact", "hello", "sales"]:
+                try:
+                    response = await client.get(
+                        f"{HUNTER_BASE_URL}/email-verifier",
+                        params={
+                            "email": f"{prefix}@{domain}",
+                            "api_key": HUNTER_API_KEY
+                        }
+                    )
+                    if response.status_code == 200:
+                        data = response.json()
+                        status = data.get("data", {}).get("status")
+                        if status in ["valid", "accept_all"]:
+                            return {
+                                "email": f"{prefix}@{domain}",
+                                "confidence": 70,
+                                "type": "guessed",
+                                "source": "pattern_guess"
+                            }
+                except Exception:
+                    continue
+    except Exception:
+        pass
     return None
 
 
