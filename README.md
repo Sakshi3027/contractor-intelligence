@@ -7,6 +7,22 @@
 ![ML](https://img.shields.io/badge/ML-XGBoost%20%2B%20SHAP-orange?style=flat-square)
 ![Agents](https://img.shields.io/badge/Agents-CrewAI%20%2B%20Groq-purple?style=flat-square)
 ![Pipeline](https://img.shields.io/badge/Pipeline-Temporal-blue?style=flat-square)
+![Live](https://img.shields.io/badge/Live-Vercel-black?style=flat-square&logo=vercel)
+
+**🔗 Live Demo: [contractor-intel-five.vercel.app](https://contractor-intel-five.vercel.app)**
+
+---
+
+## Screenshots
+
+### Dashboard Overview
+![Dashboard](https://raw.githubusercontent.com/Sakshi3027/contractor-intelligence/main/assets/dashboard.png)
+
+### Lead Scoring Table
+![Leads Table](https://raw.githubusercontent.com/Sakshi3027/contractor-intelligence/main/assets/leads-table.png)
+
+### Lead Distribution by City
+![Chart](https://raw.githubusercontent.com/Sakshi3027/contractor-intelligence/main/assets/chart.png)
 
 ---
 
@@ -147,12 +163,12 @@ Most lead generation tools are static scripts. This system:
 | Service | URL | Description |
 |---------|-----|-------------|
 | Dashboard | https://contractor-intel-five.vercel.app | Next.js UI |
-| API Docs | http://localhost:8001/docs | FastAPI Swagger |
-| MLflow | http://localhost:5002 | Experiment tracking |
-| Temporal UI | http://localhost:8888 | Workflow monitoring |
-| Grafana | http://localhost:3001 | System monitoring |
-| Prometheus | http://localhost:9090 | Metrics |
-| Qdrant | http://localhost:6333/dashboard | Vector DB UI |
+| API Docs | http://34.23.97.178:8001/docs | FastAPI Swagger |
+| MLflow | http://34.23.97.178:5002 | Experiment tracking |
+| Temporal UI | http://34.23.97.178:8888 | Workflow monitoring |
+| Grafana | http://34.23.97.178:3001 | System monitoring |
+| Prometheus | http://34.23.97.178:9090 | Metrics |
+| Qdrant | http://34.23.97.178:6333/dashboard | Vector DB UI |
 
 ---
 
@@ -187,6 +203,6 @@ This feedback loop is what separates this from a simple scraper. The system gets
 
 ## Author
 
-**Sakshi Chavan** — Software Engineer | Data Scientist | ML Engineer 
+**Sakshi Chavan** — Software Engineer | Data Scientist | ML Engineer | New York, USA
 
 GitHub: https://github.com/Sakshi3027
